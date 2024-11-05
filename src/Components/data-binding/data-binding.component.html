@@ -1,0 +1,66 @@
+<h1>Hello I am DataBinding Component</h1>
+
+<div class="row">
+  <div class="col-4">
+    <div class="row">
+      <div class="col-4">
+        <h4>Interpolation</h4>
+        <h4>
+          <!-- interpolation -->
+          {{ name }}<br />
+          {{ id }}<br />
+          {{ currentDate }}<br />
+          {{ isBangladeshi }}
+          <input type="text" value="{{ name }}" placeholder="Enter Your Name" />
+          <input type="{{ inputType }}" />
+        </h4>
+      </div>
+      <div class="col-4">
+        <h4>PropertyBinding</h4>
+        <h4 [class]="textColor">I am Property Binding</h4>
+        <input type="text" [value]="name" />
+      </div>
+      <div class="col-4">
+        <h4>Event Binding</h4>
+        <button
+          class="btn btn-success"
+          (click)="showAlert('Welcome to My Angular Learning World')"
+        >
+          Show Alert
+        </button>
+        <button class="btn btn-danger" (click)="changeName('Hyee Sezuti')">
+          Click me
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <h4>2 way binding</h4>
+    <input type="text" [(ngModel)]="name" placeholder="Enter Your Name" />{{
+      name
+    }}
+    <div>
+      <h2>User Registration</h2>
+
+      <label for="name">Name:</label>
+      <input id="name" [(ngModel)]="name" placeholder="Enter your name" />
+
+      <label for="email">Email:</label>
+      <input id="email" [(ngModel)]="email" placeholder="Enter your email" />
+
+      <label for="password">Password:</label>
+      <input
+        id="password"
+        [(ngModel)]="password"
+        type="password"
+        placeholder="Enter your password"
+      />
+
+      <h3>Preview:</h3>
+      <p>Name: {{ name }}</p>
+      <p>Email: {{ email }}</p>
+      <p>Email: {{ password }}</p>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</div>

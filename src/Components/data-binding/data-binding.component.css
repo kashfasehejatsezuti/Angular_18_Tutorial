@@ -1,0 +1,9 @@
+h1 {
+  color: rgb(43, 226, 159);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.color-red {
+  color: red;
+  text-decoration: underline;
+}
