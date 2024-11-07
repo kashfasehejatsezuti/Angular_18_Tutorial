@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,13 +10,16 @@ import { FormsModule } from '@angular/forms';
 })
 export class DataBindingComponent {
   name: string = 'Angular 18 '; //variable declaration with initialization
-  email:string='abc@gmail.com';
-  password:string="1234"
+  email: string = 'abc@gmail.com';
+  password: string = '1234';
   id: number = 1;
   inputType = 'checkbox'; // directly variable initialization
-  isBangladeshi = false;
+  isBangladeshi = true;
   currentDate: Date = new Date();
   textColor: string = 'color-red';
+  selectArea: string = 'Dhaka';
+  fullName = signal('Kashfa Sehejat Sezuti');
+  
 
   constructor() {
     // this.name = 'Angular';
@@ -29,5 +32,6 @@ export class DataBindingComponent {
   }
   changeName(newName: string) {
     this.name = newName;
+    this.fullName.set('Sezuti Chowdhury');
   }
 }

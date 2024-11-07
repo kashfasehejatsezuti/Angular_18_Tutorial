@@ -7,3 +7,7 @@ h1 {
   color: red;
   text-decoration: underline;
 }
+.single_text {
+  color: rgb(2, 82, 62);
+  margin: 2rem;
+}

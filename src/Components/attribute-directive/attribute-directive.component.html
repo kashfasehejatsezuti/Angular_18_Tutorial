@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="header">
+    <h1>Attribute Directive</h1>
+    <h3>*ngIf, *ngFor...</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="box red" *ngIf="isDiv1Visible" [ngClass]="div1BgColor">
+      <h1>Div1</h1>
+    </div>
+  </div>
+  <div class="col-3">
+    <div
+      class="box green"
+      [ngClass]="div2BgColor == true ? 'bg-warning' : 'bg-danger'"
+    >
+      <h1>Div2</h1>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="box gray" *ngIf="box1Div3 == box2Div3"><h1>Div3</h1></div>
+  </div>
+  <div class="col-3">
+    <div class="box blue" *ngIf="check"><h1>Div4</h1></div>
+  </div>
+</div>
+<div class="row buttons">
+  <div class="col-3 d-flex align-items-center justify-content-center">
+    <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+    <button class="btn btn-success" (click)="showDiv2()">Show</button>
+  </div>
+  <div class="col-3 d-flex align-items-center justify-content-center">
+    <button class="btn btn-warning text-white" (click)="toggleDiv2()">
+      Toggle
+    </button>
+  </div>
+  <div class="col-3 inputs d-flex align-items-center justify-content-center">
+    <input type="text" [(ngModel)]="box1Div3" placeholder="Num-1" />
+    <input type="text" [(ngModel)]="box2Div3" placeholder="Num-2" />
+  </div>
+  <div class="col-3 inputs d-flex align-items-center justify-content-center">
+    <input type="checkbox" [(ngModel)]="check" />
+    <select>
+      <option>Select State</option>
+      <option>State 1</option>
+      <option>State 2</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <h1>ngFor Uses</h1>
+    <table [ngStyle]="customStyle" class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Roll</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr scope="row" *ngFor="let value of data">
+          <td>{{ value.nickName }}</td>
+          <td>{{ value.roll }}</td>
+          <td
+            [ngStyle]="{
+              'background-color': value.status ? 'lightgreen' : 'red',
+              'font-weight': value.status ? '800' : '500'
+            }"
+          >
+            <span>{{ value.status ? "Active" : "De-Active" }}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-6"></div>
+</div>

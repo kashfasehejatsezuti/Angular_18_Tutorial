@@ -1,0 +1,58 @@
+.header {
+  background-color: #6c757d;
+  width: 100%;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 50px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.box {
+  flex: 1;
+  margin: 5px;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  font-size: 24px;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.gray {
+  background-color: gray;
+}
+.blue {
+  background-color: blue;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.inputs input,
+.inputs select {
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}

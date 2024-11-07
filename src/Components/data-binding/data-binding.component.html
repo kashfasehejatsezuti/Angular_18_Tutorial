@@ -1,7 +1,7 @@
 <h1>Hello I am DataBinding Component</h1>
 
 <div class="row">
-  <div class="col-4">
+  <div class="col-8">
     <div class="row">
       <div class="col-4">
         <h4>Interpolation</h4>
@@ -34,7 +34,7 @@
       </div>
     </div>
   </div>
-  <div class="col-4">
+  <div class="col-2">
     <h4>2 way binding</h4>
     <input type="text" [(ngModel)]="name" placeholder="Enter Your Name" />{{
       name
@@ -43,10 +43,14 @@
       <h2>User Registration</h2>
 
       <label for="name">Name:</label>
-      <input id="name" [(ngModel)]="name" placeholder="Enter your name" />
+      <input id="name" [(ngModel)]="name" placeholder="Enter your name" /><br />
 
       <label for="email">Email:</label>
-      <input id="email" [(ngModel)]="email" placeholder="Enter your email" />
+      <input
+        id="email"
+        [(ngModel)]="email"
+        placeholder="Enter your email"
+      /><br />
 
       <label for="password">Password:</label>
       <input
@@ -61,6 +65,19 @@
       <p>Email: {{ email }}</p>
       <p>Email: {{ password }}</p>
     </div>
+    <div>
+      <input type="checkbox" [(ngModel)]="isBangladeshi" />
+      <select [(ngModel)]="selectArea">
+        <option value="">Select</option>
+        <option value="Dhaka">Dhaka</option>
+        <option value="Madaripur">Madaripur</option>
+        <option value="Dinajpur">Dinajpur</option>
+      </select>
+    </div>
   </div>
-  <div class="col-4"></div>
+  <div class="col-2">
+    <h4>Single Data Binding</h4>
+    <div class="single_text">{{ fullName() }}</div>
+    <button (click)="changeName('Rafsan Jany Chowdhury')">click</button>
+  </div>
 </div>
