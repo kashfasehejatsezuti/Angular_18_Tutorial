@@ -1,0 +1,22 @@
+<div class="row">
+  <h1 class="text-align-center">Hello I am Pipe Feature</h1>
+  <br />
+  <div class="col-6">
+    {{ firstName }} ----
+    <h4>{{ firstName | uppercase }}</h4>
+    {{ title | uppercase }} --
+    <h4>{{ title | titlecase }}</h4>
+    {{ currentDate }} --
+    <h4>{{ currentDate | date : "dd-MM-yyyy" }}</h4>
+    <h4>{{ currentDate | date : "dd MMM yyyy" }}</h4>
+    <h4>{{ currentDate | date : "dd/MM/yyyy" }}</h4>
+    <h4>{{ currentDate | date : "dd.MM.yyyy" }}</h4>
+  </div>
+  <div class="col-6">
+    {{ person }}
+    <h4>{{ person | json }}</h4>
+    <h4>My Own Watch</h4>
+    <h4>{{ currentTime | async | date : "hh:mm:ss" }}</h4>
+    <h4>{{ person.status | cp }}</h4>
+  </div>
+</div>

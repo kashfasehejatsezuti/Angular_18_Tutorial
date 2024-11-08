@@ -4,9 +4,13 @@
 <app-data-binding></app-data-binding> -->
 <!-- <app-structural-directive></app-structural-directive> -->
 <!-- <app-attribute-directive></app-attribute-directive> -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid d-flex align-items-center justify-content-center">
+    <a
+      class="navbar-brand d-flex align-items-center justify-content-center"
+      href="#"
+      >Navbar</a
+    >
     <button
       class="navbar-toggler"
       type="button"
@@ -22,34 +26,21 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a
-            class="nav-link active"
+            class="nav-link active m-4 font-4rem"
             aria-current="page"
             routerLink="structural-dir"
-            >Home</a
+            >Structural Directive</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="attribute-dir">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+          <a class="nav-link active m-4 font-4rem" routerLink="attribute-dir"
+            >Attribute Directive</a
           >
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="add-emp">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link active m-4 font-4rem" routerLink="pipe"
+            >Pipe</a
+          >
         </li>
       </ul>
       <form class="d-flex" role="search">

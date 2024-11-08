@@ -3,6 +3,7 @@ import { AddEmployeeComponent } from '../Components/add-employee/add-employee.co
 import { DataBindingComponent } from '../Components/data-binding/data-binding.component';
 import { StructuralDirectiveComponent } from '../Components/structural-directive/structural-directive.component';
 import { AttributeDirectiveComponent } from '../Components/attribute-directive/attribute-directive.component';
+import { PipeComponent } from '../Components/pipe/pipe.component';
 
 export const routes: Routes = [
   {
@@ -20,5 +21,9 @@ export const routes: Routes = [
   {
     path: 'attribute-dir',
     component: AttributeDirectiveComponent,
+  },
+  {
+    path: 'pipe',
+    component: PipeComponent,
   },
 ];
